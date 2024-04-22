@@ -1,21 +1,24 @@
 import { useEffect, useState } from "react"
-import { Print } from "./print"
+
 export function List(){
-    const [user,setUser] = useState(null)
+    const [user,setUser] = useState([])
     
     useEffect(() => {
         
-        const response  = fetch ('https://jsonplaceholder.typicode.com/users').then((response) => response.json())
-        setUser(response)
+    fetch ('https://jsonplaceholder.typicode.com/users')
+    .then(response => response.json())
+    .then(json => setUser(json))
+    
         
     },[])
     
 
-    
+
 
 return(
-    <>    
-        {user && <p>{user}</p>}   
-    </>
+    <div>    
+       
+        {user.map(item => (<div>{item.name}</div>))}
+    </div>
 )
 }
