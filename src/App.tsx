@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import { Start } from './Components/CountDownTimer'
 import './App.module.css'
 import { List } from './Components/UserList'
+import { Window } from './Components/WindowSize'
 export function App() {
 
 
@@ -11,6 +12,7 @@ export function App() {
     <>
       <Start/>
       <List/>
+      <Window/>
     </>
   )
 }
