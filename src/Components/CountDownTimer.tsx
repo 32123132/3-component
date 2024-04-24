@@ -7,17 +7,17 @@ export function Start() {
     
     useEffect( ()=>{
         if (count >0){
-            var timeout = setTimeout(() => {
+            var tmeout = setTimeout(() => {
                 setCount(count-1)
             
         }, 1000);
         
     };
         return () => {
-            clearTimeout(timeout)
+            clearTimeout(tmeout)
         }
     })
-  
+    
     return(<>
 
           <h1>{count}</h1>
